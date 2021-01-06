@@ -1,0 +1,74 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Collecting data..."
+msgstr ""
+
+msgid "Frequency"
+msgstr ""
+
+msgid "Ghz"
+msgstr ""
+
+msgid "Interface is down"
+msgstr ""
+
+msgid "Interface is up"
+msgstr ""
+
+msgid "Interfaces statistics"
+msgstr ""
+
+msgid "MAC Address"
+msgstr ""
+
+msgid "No interfaces detected"
+msgstr ""
+
+msgid "Parameter"
+msgstr ""
+
+msgid "Receive"
+msgstr ""
+
+msgid "Refresh interfaces"
+msgstr ""
+
+msgid "SSID"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Transmit"
+msgstr ""
+
+msgid "bytes"
+msgstr ""
+
+msgid "carrier"
+msgstr ""
+
+msgid "collisions"
+msgstr ""
+
+msgid "compressed"
+msgstr ""
+
+msgid "dropped"
+msgstr ""
+
+msgid "errors"
+msgstr ""
+
+msgid "fifo"
+msgstr ""
+
+msgid "frame"
+msgstr ""
+
+msgid "multicast"
+msgstr ""
+
+msgid "packets"
+msgstr ""
