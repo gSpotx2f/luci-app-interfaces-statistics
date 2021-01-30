@@ -15,7 +15,7 @@ function getIfaces(ifArr) {
 		if(obj.dev) {
 			if(obj.dev.wireless) {
 				ssid = obj.wif._ubusdata.net.config.ssid;
-				freq = String(obj.wif._ubusdata.dev.iwinfo.frequency / 1000).slice(0, 3);
+				freq = String(obj.wif._ubusdata.dev.iwinfo.frequency / 1000);
 			};
 			ifacesArray.push([
 				obj.dev.rawname,

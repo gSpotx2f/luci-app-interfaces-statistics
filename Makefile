@@ -6,7 +6,8 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-interfaces-statistics
+PKG_VERSION:=0.3
+PKG_RELEASE:=1
 LUCI_TITLE:=Network interfaces statistics
 LUCI_DEPENDS:=+luci-mod-admin-full
 LUCI_PKGARCH:=all
