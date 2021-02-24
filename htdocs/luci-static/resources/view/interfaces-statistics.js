@@ -168,6 +168,7 @@ return L.view.extend({
 	},
 
 	render: function(ifacesData) {
+
 		let ifacesNode = E('div', { 'class': 'cbi-section fade-in' },
 			E('div', { 'class': 'cbi-section-node' },
 				E('div', { 'class': 'cbi-value' },
@@ -231,7 +232,7 @@ return L.view.extend({
 					if(ifaceSsid) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('SSID')),
+								E('div', { 'class': 'td left', 'width': '33%' }, _('SSID') + ':'),
 								E('div', { 'class': 'td left' }, ifaceSsid),
 							]),
 						);
@@ -240,7 +241,7 @@ return L.view.extend({
 					if(ifaceFreq) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('Frequency')),
+								E('div', { 'class': 'td left', 'width': '33%' }, _('Frequency') + ':'),
 								E('div', { 'class': 'td left' }, ifaceFreq + ' ' + _('Ghz')),
 							]),
 						);
@@ -249,7 +250,7 @@ return L.view.extend({
 					if(ifaceMac) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('MAC Address')),
+								E('div', { 'class': 'td left', 'width': '33%' }, _('MAC Address') + ':'),
 								E('div', { 'class': 'td left' }, ifaceMac),
 							]),
 						);
@@ -257,7 +258,7 @@ return L.view.extend({
 
 					ifaceTable.append(
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left', 'width': '33%' }, _('State')),
+							E('div', { 'class': 'td left', 'width': '33%' }, _('State') + ':'),
 							E('div', { 'class': 'td left' },
 								E('span', {
 									'id': ifaceName + '_state',
@@ -279,69 +280,69 @@ return L.view.extend({
 							E('div', { 'class': 'th left' }, _('Transmit')),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('bytes')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_bytes_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('bytes')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_bytes_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][0]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_bytes_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_bytes_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][8]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('packets')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_packets_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('packets')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_packets_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][1]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_packets_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_packets_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][9]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('errors')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_errors_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('errors')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_errors_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][2]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_errors_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_errors_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][10]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('dropped')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_drop_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('dropped')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_drop_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][3]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_drop_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_drop_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][11]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('fifo')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_fifo_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('fifo')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_fifo_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][4]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_fifo_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_fifo_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][12]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('frame')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_frame_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('frame')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_frame_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][5]),
-							E('div', { 'class': 'td left' }, ''),
+							E('div', { 'class': 'td left', 'data-title': _('Transmit') }, '&#160;'),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('collisions')),
-							E('div', { 'class': 'td left' }, ''),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_collisions_tx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('collisions')),
+							E('div', { 'class': 'td left', 'data-title': _('Receive') }, '&#160;'),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_collisions_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][13]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('compressed')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_compressed_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('compressed')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_compressed_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][6]),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_compressed_tx' },
+							E('div', { 'class': 'td left', 'id': ifaceName + '_compressed_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][15]),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('multicast')),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_multicast_rx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('multicast')),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_multicast_rx', 'data-title': _('Receive') },
 								ifacesStatisticsObject[ifaceName][7]),
-							E('div', { 'class': 'td left' }, ''),
+							E('div', { 'class': 'td left', 'data-title': _('Transmit') }, '&#160;'),
 						]),
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left' }, _('carrier')),
-							E('div', { 'class': 'td left' }, ''),
-							E('div', { 'class': 'td left', 'id': ifaceName + '_carrier_tx' },
+							E('div', { 'class': 'td left', 'data-title': _('Parameter') }, _('carrier')),
+							E('div', { 'class': 'td left', 'data-title': _('Receive') }, '&#160;'),
+							E('div', { 'class': 'td left', 'id': ifaceName + '_carrier_tx', 'data-title': _('Transmit') },
 								ifacesStatisticsObject[ifaceName][14]),
 						]),
 					]);
