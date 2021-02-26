@@ -231,7 +231,7 @@ return L.view.extend({
 					if(ifaceSsid) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('SSID') + ':'),
+								E('div', { 'class': 'td left', 'style': 'min-width:33%' }, _('SSID') + ':'),
 								E('div', { 'class': 'td left' }, ifaceSsid),
 							]),
 						);
@@ -240,7 +240,7 @@ return L.view.extend({
 					if(ifaceFreq) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('Frequency') + ':'),
+								E('div', { 'class': 'td left', 'style': 'min-width:33%' }, _('Frequency') + ':'),
 								E('div', { 'class': 'td left' }, ifaceFreq + ' ' + _('Ghz')),
 							]),
 						);
@@ -249,7 +249,7 @@ return L.view.extend({
 					if(ifaceMac) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('MAC Address') + ':'),
+								E('div', { 'class': 'td left', 'style': 'min-width:33%' }, _('MAC Address') + ':'),
 								E('div', { 'class': 'td left' }, ifaceMac),
 							]),
 						);
@@ -257,7 +257,7 @@ return L.view.extend({
 
 					ifaceTable.append(
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left', 'style': 'width:33%' }, _('State') + ':'),
+							E('div', { 'class': 'td left', 'style': 'min-width:33%' }, _('State') + ':'),
 							E('div', { 'class': 'td left' },
 								E('span', {
 									'id': ifaceName + '_state',
@@ -274,8 +274,8 @@ return L.view.extend({
 
 					let statTable = E('div', { 'class': 'table' }, [
 						E('div', { 'class': 'tr table-titles' }, [
-							E('div', { 'class': 'th left', 'width': '33%' }, _('Parameter')),
-							E('div', { 'class': 'th left', 'width': '33%' }, _('Receive')),
+							E('div', { 'class': 'th left', 'style': 'min-width:33%' }, _('Parameter')),
+							E('div', { 'class': 'th left', 'style': 'min-width:33%' }, _('Receive')),
 							E('div', { 'class': 'th left' }, _('Transmit')),
 						]),
 						E('div', { 'class': 'tr' }, [
