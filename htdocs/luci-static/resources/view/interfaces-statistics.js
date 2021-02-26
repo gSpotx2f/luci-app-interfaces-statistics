@@ -168,7 +168,6 @@ return L.view.extend({
 	},
 
 	render: function(ifacesData) {
-
 		let ifacesNode = E('div', { 'class': 'cbi-section fade-in' },
 			E('div', { 'class': 'cbi-section-node' },
 				E('div', { 'class': 'cbi-value' },
@@ -232,7 +231,7 @@ return L.view.extend({
 					if(ifaceSsid) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('SSID') + ':'),
+								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('SSID') + ':'),
 								E('div', { 'class': 'td left' }, ifaceSsid),
 							]),
 						);
@@ -241,7 +240,7 @@ return L.view.extend({
 					if(ifaceFreq) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('Frequency') + ':'),
+								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('Frequency') + ':'),
 								E('div', { 'class': 'td left' }, ifaceFreq + ' ' + _('Ghz')),
 							]),
 						);
@@ -250,7 +249,7 @@ return L.view.extend({
 					if(ifaceMac) {
 						ifaceTable.append(
 							E('div', { 'class': 'tr' }, [
-								E('div', { 'class': 'td left', 'width': '33%' }, _('MAC Address') + ':'),
+								E('div', { 'class': 'td left', 'style': 'width:33%' }, _('MAC Address') + ':'),
 								E('div', { 'class': 'td left' }, ifaceMac),
 							]),
 						);
@@ -258,7 +257,7 @@ return L.view.extend({
 
 					ifaceTable.append(
 						E('div', { 'class': 'tr' }, [
-							E('div', { 'class': 'td left', 'width': '33%' }, _('State') + ':'),
+							E('div', { 'class': 'td left', 'style': 'width:33%' }, _('State') + ':'),
 							E('div', { 'class': 'td left' },
 								E('span', {
 									'id': ifaceName + '_state',
