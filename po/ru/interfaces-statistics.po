@@ -12,15 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Language: ru\n"
 
-msgid "Collecting data..."
-msgstr "Сбор данных..."
-
-msgid "Frequency"
-msgstr "Частота"
-
-msgid "Ghz"
-msgstr "Ггц"
-
 msgid "Interface is down"
 msgstr "Интерфейс выключен"
 
@@ -45,19 +36,19 @@ msgstr "Получено"
 msgid "Refresh interfaces"
 msgstr "Обновить интерфейсы"
 
-msgid "SSID"
-msgstr ""
-
 msgid "State"
 msgstr "Состояние"
 
 msgid "Transmit"
 msgstr "Передано"
 
+msgid "aborted errors"
+msgstr ""
+
 msgid "bytes"
 msgstr ""
 
-msgid "carrier"
+msgid "carrier errors"
 msgstr ""
 
 msgid "collisions"
@@ -66,20 +57,38 @@ msgstr ""
 msgid "compressed"
 msgstr ""
 
+msgid "crc errors"
+msgstr ""
+
 msgid "dropped"
 msgstr ""
 
 msgid "errors"
 msgstr ""
 
-msgid "fifo"
+msgid "fifo errors"
 msgstr ""
 
-msgid "frame"
+msgid "frame errors"
+msgstr ""
+
+msgid "heartbeat errors"
+msgstr ""
+
+msgid "length errors"
+msgstr ""
+
+msgid "missed errors"
 msgstr ""
 
 msgid "multicast"
 msgstr ""
 
+msgid "over errors"
+msgstr ""
+
 msgid "packets"
+msgstr ""
+
+msgid "window errors"
 msgstr ""
