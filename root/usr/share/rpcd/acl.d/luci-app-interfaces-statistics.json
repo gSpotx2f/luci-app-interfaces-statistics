@@ -2,11 +2,9 @@
 	"luci-app-interfaces-statistics": {
 		"description": "Grant access to interfaces-statistics procedures",
 		"read": {
-			"cgi-io": [ "exec" ],
-			"file": {
-				"/sys/class/net/[a-zA-Z0-9._-]*/operstate": [ "read" ],
-				"/proc/net/dev": [ "read" ]
-			},
+			"ubus": {
+				"network.device": [ "status" ]
+			}
 		}
 	}
 }
