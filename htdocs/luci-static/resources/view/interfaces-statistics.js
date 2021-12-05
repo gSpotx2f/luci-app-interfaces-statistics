@@ -1,10 +1,12 @@
 'use strict';
+'require poll';
 'require rpc';
 'require ui';
+'require view';
 
 const labelColorUp = '#46a546';
 
-return L.view.extend({
+return view.extend({
 	ifacesArray: [],
 
 	callNetDevice: rpc.declare({
@@ -38,7 +40,7 @@ return L.view.extend({
 		};
 	},
 
-	poll: function() {
+	update: function() {
 		return this.callNetDevice().then(ifacesData => {
 			this.setIfacesData(ifacesData);
 		}).catch(e => ui.addNotification(null, E('p', {}, e.message)));
@@ -79,10 +81,10 @@ return L.view.extend({
 			let tab = 0;
 
 			for(let iface in ifacesData) {
-				let ifaceName = iface;
+				let ifaceName              = iface;
 				let ifacesStatisticsObject = ifacesData[iface].statistics;
-				let ifaceState = ifacesData[iface].up;
-				let ifaceMac = ifacesData[iface].macaddr;
+				let ifaceState             = ifacesData[iface].up;
+				let ifaceMac               = ifacesData[iface].macaddr;
 
 				if(ifaceMac === "00:00:00:00:00:00") {
 					ifaceMac = null;
@@ -351,7 +353,7 @@ return L.view.extend({
 			};
 
 			ui.tabs.initTabGroup(tabsContainer.children);
-			L.Poll.add(L.bind(this.poll, this));
+			poll.add(L.bind(this.update, this));
 		};
 
 		return E([
@@ -362,6 +364,6 @@ return L.view.extend({
 	},
 
 	handleSaveApply: null,
-	handleSave: null,
-	handleReset: null,
+	handleSave     : null,
+	handleReset    : null,
 });
