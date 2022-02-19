@@ -4,7 +4,7 @@
 'require ui';
 'require view';
 
-const labelColorUp = '#46a546';
+const labelStyleUp = 'background-color:#46a546; color:#ffffff';
 
 return view.extend({
 	ifacesArray  : [],
@@ -27,7 +27,7 @@ return view.extend({
 
 			let state         = document.querySelector('[data-ifstat="%s_state"]'.format(iface));
 			state.textContent = (ifaceState) ? _('Interface is up') : _('Interface is down');
-			state.style       = (ifaceState) ? 'background-color:'+ labelColorUp : '';
+			state.style       = (ifaceState) ? labelStyleUp : '';
 
 			if(!ifacesStatisticsObject) continue;
 
@@ -119,8 +119,7 @@ return view.extend({
 							E('span', {
 								'data-ifstat': iface + '_state',
 								'class': 'label',
-								'style': (ifaceState) ?
-									'background-color:'+ labelColorUp : '',
+								'style': (ifaceState) ? labelStyleUp : '',
 							},
 								(ifaceState) ?
 									_('Interface is up') : _('Interface is down')

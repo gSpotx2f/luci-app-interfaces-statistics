@@ -6,7 +6,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_VERSION:=0.4-3
+PKG_VERSION:=0.4-4
 LUCI_TITLE:=Network interfaces statistics
 LUCI_PKGARCH:=all
 PKG_LICENSE:=MIT
