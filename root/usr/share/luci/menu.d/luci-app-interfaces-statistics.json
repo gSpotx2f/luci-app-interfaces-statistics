@@ -1,6 +1,6 @@
 {
 	"admin/network/interfaces-statistics": {
-		"title": "Interfaces statistics",
+		"title": "Interfaces Statistics",
 		"order": 70,
 		"action": {
 			"type": "view",

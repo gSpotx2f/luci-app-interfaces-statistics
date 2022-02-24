@@ -27,7 +27,7 @@ msgstr "接口已关闭"
 msgid "Interface is up"
 msgstr "接口已打开"
 
-msgid "Interfaces statistics"
+msgid "Interfaces Statistics"
 msgstr "接口统计"
 
 msgid "MAC Address"

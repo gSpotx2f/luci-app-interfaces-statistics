@@ -7,7 +7,7 @@ msgstr ""
 msgid "Interface is up"
 msgstr ""
 
-msgid "Interfaces statistics"
+msgid "Interfaces Statistics"
 msgstr ""
 
 msgid "MAC Address"

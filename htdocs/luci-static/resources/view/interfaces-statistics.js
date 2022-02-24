@@ -356,7 +356,7 @@ return view.extend({
 		};
 
 		return E([
-			E('h2', { 'class': 'fade-in' }, _('Interfaces statistics')),
+			E('h2', { 'class': 'fade-in' }, _('Interfaces Statistics')),
 			E('div', { 'class': 'cbi-section-descr fade-in' }),
 			ifacesNode,
 		]);

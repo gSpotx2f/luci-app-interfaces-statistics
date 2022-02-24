@@ -18,7 +18,7 @@ msgstr "Интерфейс выключен"
 msgid "Interface is up"
 msgstr "Интерфейс включен"
 
-msgid "Interfaces statistics"
+msgid "Interfaces Statistics"
 msgstr "Статистика интерфейсов"
 
 msgid "MAC Address"
